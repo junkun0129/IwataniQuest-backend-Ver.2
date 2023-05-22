@@ -1,17 +1,15 @@
 const User = require("../model/User");
 const Status = require("../model/UserStatus");
 
-const userSave = async ({ name, level, at, exp, hp }) => {
-  console.log(name);
+const userSave = async ({ name, level, at, exp, hp, requireExp }) => {
   const user = await User.findOne({ name });
 
   const status = await Status.findOne({ _id: user.status });
 
-  console.log(status, ";lkj");
-
   await status.overwrite({
     level,
     exp,
+    requireExp,
     hp,
     maxmumHp: hp,
     at,

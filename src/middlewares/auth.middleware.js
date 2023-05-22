@@ -20,6 +20,7 @@ const signUp = async (data) => {
   const firststatus = {
     level: 1,
     exp: 0,
+    require: 10,
     hp: 20,
     maxmumHp: 20,
     at: 5,
