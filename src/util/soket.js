@@ -47,7 +47,6 @@ module.exports = (http) => {
 
     socket.on("walk", (data) => {
       //   console.log(data);
-
       const isLogin = walkingPerson.find((each) => each.email === data.email);
       if (!isLogin) {
         walkingPerson.push(data);

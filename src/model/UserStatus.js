@@ -26,6 +26,14 @@ const userStatusSchema = new Schema({
     type: Number,
     required: true,
   },
+  x: {
+    type: Number,
+    required: true,
+  },
+  y: {
+    type: Number,
+    require: true,
+  },
 });
 
 module.exports = model("Status", userStatusSchema);
