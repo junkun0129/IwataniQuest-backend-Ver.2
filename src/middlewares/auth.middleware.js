@@ -24,8 +24,9 @@ const signUp = async (data) => {
     hp: 20,
     maxmumHp: 20,
     at: 5,
-    x: 1650,
-    y: 1826,
+    x: 1524,
+    y: 1739,
+    mapState: 5,
   };
 
   const userstatus = new Status(firststatus);

@@ -34,6 +34,10 @@ const userStatusSchema = new Schema({
     type: Number,
     require: true,
   },
+  mapState: {
+    type: Number,
+    require: true,
+  },
 });
 
 module.exports = model("Status", userStatusSchema);

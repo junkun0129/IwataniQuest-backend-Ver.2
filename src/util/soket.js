@@ -31,8 +31,7 @@ module.exports = (http) => {
     });
 
     socket.on("save", (data) => {
-      console.log(data, "rthis");
-      socket.emit("save", "save");
+      socket.emit("save", data);
     });
 
     socket.on("textOpen", (data) => {
@@ -62,6 +61,10 @@ module.exports = (http) => {
       console.log(walkingPerson);
     });
 
+    socket.on("saveDone", (data) => {
+      console.log(data, ";l;;;;");
+      socket.emit("saveDoneToGP", data);
+    });
     setInterval(() => {
       // console.log(walkingPerson);
       socket.emit("pedestrians", walkingPerson);
